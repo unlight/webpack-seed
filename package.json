@@ -4,10 +4,13 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "webpack": "webpack",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "license": "XNet",
   "devDependencies": {
+    "@types/node": "6.0.45",
+    "awesome-typescript-loader": "2.2.4",
     "webpack": "2.1.0-beta.25",
     "webpack-stringify-loaders": "1.0.2"
   }

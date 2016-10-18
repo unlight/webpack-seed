@@ -1,13 +1,2 @@
-const path = require("path");
-
-module.exports = {
-    entry: "./src",
-    output: {
-        path: path.join(__dirname, "build"),
-        filename: "bundle.js",
-    },
-    module: {
-        loaders: [
-        ]
-    }
-};
+const ts = require("typescript");
+eval(ts.transpile(require("fs").readFileSync("./config/webpack.config.ts", "utf8")));
