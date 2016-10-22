@@ -9,13 +9,6 @@
         "experimentalDecorators": true,
         "sourceMap": true,
         "declaration": true,
-        "types" : ["node"]
-    },
-    "include": [
-        "src/**/*"
-    ],
-    "exclude": [
-        "build",
-        "node_modules"
-    ]
+        "types": ["node"]
+    }
 }
