@@ -1,19 +1,35 @@
-const path = require("path");
+import * as Path from 'path';
+const pkgDir = require('pkg-dir');
+const projectRoot = pkgDir.sync();
 
 module.exports = {
-    entry: "./src",
+    entry: {
+        main: Path.join(projectRoot, "src"),
+    },
     devtool: 'source-map',
     resolve: {
-        extensions: ['.ts', '.tsx', '.js', '.jsx']
+        extensions: ['.ts', '.json', '.tsx', '.js', '.jsx'],
+        alias: {
+            'power-assert': 'power-assert/build/power-assert',
+        },
     },
     output: {
-        path: path.join(__dirname, "build"),
-        filename: "bundle.js",
+        path: Path.join(projectRoot, "build"),
+        filename: "[name].bundle.js",
     },
     module: {
-        loaders: [{
-            test: /\.ts$/,
-            loader: 'awesome-typescript-loader'
-        }]
+        rules: [
+            {
+                test: /\.ts$/,
+                loaders: [
+                    'webpack-espower-loader',
+                    'awesome-typescript-loader',
+                ]
+            },
+            {
+                test: /\.json$/,
+                loader: 'json-loader'
+            },
+        ],
     }
 };

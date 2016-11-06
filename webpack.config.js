@@ -1,2 +1,2 @@
-const ts = require("typescript");
-eval(ts.transpile(require("fs").readFileSync("./config/webpack.config.ts", "utf8")));
+require('ts-node').register({ });
+module.exports = require("./config/webpack.config.ts");

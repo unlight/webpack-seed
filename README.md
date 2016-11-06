@@ -9,3 +9,4 @@
 
 ## RESOURCES
 * https://github.com/d3viant0ne/awesome-webpack
+* https://github.com/AngularClass/angular2-webpack-starter
