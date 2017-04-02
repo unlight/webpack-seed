@@ -1,5 +1,7 @@
 # Webpack Seed
 
+[![Greenkeeper badge](https://badges.greenkeeper.io/unlight/webpack-seed.svg)](https://greenkeeper.io/)
+
 # Still in development...
 
 ## STACK
